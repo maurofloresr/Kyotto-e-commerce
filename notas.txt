@@ -1,0 +1,26 @@
+ver de cambiar el logo del .ico segun color pestaña
+
+medidas mobile;
+opone 14 pro max:   428 x 926
+iPhone 13:          390 x 844
+iPhone X:           375 x 812
+iPhone XS Max:      414 x 896
+iPhone 8:           375 x 667
+
+promedio:           395 x 823
+395
+
+
+
+sacar el colo rwhite en todo el home
+
+
+ver de sacar los img, objet-fit: cover de todas las img xq lo agregue al principio
+cambiar todo container por contenedor por bootstarp
+
+
+solucionar el tocar fuera del carrito
+
+soluconar el actualizar carrito
+
+PONER LOS CURSOR: POINTER !!! CSS

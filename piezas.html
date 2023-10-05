@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mauro Flores">
+    <meta name="description"
+        content="Bienvenidos a Kyotto Sushi, el mejor sushi de Villa Luro, Mataderos, Versalles y más, ¡Conocenos!">
+    <meta name="keywords"
+        content="Sushi, comida, delivery, Villa Luro, Versalles, Mataderos, Liniers, Floresta, Rico, Fresco">
+    <title>Kyotto Sushi</title>
+    <link rel="icon" href="imagenes/logo.favicon.negro.png">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@300;500&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome, menú hamburguesa -->
+    <script src="https://kit.fontawesome.com/cb07330d3d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header estiloTienda">
+        <nav class="navbar">
+            <a href="index.html" class="navbar__logo">
+                <img src="imagenes/KblancaSinFondo.png" alt="Logo">
+            </a>
+            <button class="navbar__toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="navbar__links navbar__links--hidden">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#sobreNosotros1">SOBRE NOSOTROS</a></li>
+                    <li><a class="active" href="#">TIENDA</a></li>
+                    <li><a href="index.html#footer">CONTACTO</a></li>
+                    <li><a href="#" id="botonCarrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mainTienda">
+        <div class="carrito" id="carrito">
+            <div class="carrito__titulo">
+                <h6>CARRITO DE COMPRAS</h6>
+                <button id="salirCarrito">X</button>
+            </div>
+            <div class="carrito__separacion"></div>
+            <div class="carrito__contenido" id="contendorDelCarrito">
+                <p>no hay nada</p>
+            </div>
+            <div class="carrito__detalle">
+                <div class="carrito__detalle__total">
+                    <p class="carrito__detalle__total__palabra">Total:</p>
+                    <p class="carrito__detalle__total__numero" id="totalCarrito"></p>
+                </div>
+                <button class="carrito__detalle__comprar">INICIAR COMPRA</button>
+                <button class="carrito__detalle__volver">seguir comprando</button>
+            </div>
+        </div>
+        <h3>DELI & <br>TAKE AWAY<br>ONLINE</h3>
+        <section class="contenidoTienda">
+            <button id="piezas">
+                <p class="estiloTituloTienda">PIEZAS</p>
+                <div class="clicAqui">
+                    <p>clic aqui</p>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+            </button>
+            <div id="contenidoPiezas"></div>
+            <button id="combos">
+                <p class="estiloTituloTienda">COMBOS</p>
+                <div class="clicAqui">
+                    <p>clic aqui</p>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+            </button>
+            <div id="contenidoCombos"></div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="principal">
+            <div class="principal__contacto">
+                <p class="principal__contacto__titulo">CONTACTANOS</p>
+                <div class="principal__contacto__caja">
+                    <div class="principal__contacto__caja__sociales">
+                        <p class="principal__contacto__caja__sociales__titulos">SOCIALES</p>
+                        <a href="">Instagram</a>
+                        <a href="">Facebook</a>
+                        <a href="">Mail</a>
+                    </div>
+                    <div class="pricipal__contacto_caja__ubicacion">
+                        <p class="principal__contacto__caja__sociales__titulos">UBICACIÓN</p>
+                        <a href="">FONROUGE 248, VILLA LURO <br>BUENOS AIRES<br> ARGENTINA</a>
+                    </div>
+                </div>
+            </div>
+            <div class="principal__mapa">
+                <!-- <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.5302707302135!2d-58.5133447!3d-34.6413089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc84c1419b7b3%3A0x3cbbb25a5907bb2b!2sFonrouge%20248%2C%20C1408HFF%20CABA!5e0!3m2!1ses-419!2sar!4v1686171573065!5m2!1ses-419!2sar"
+                    width="450" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            </div>
+        </div>
+        <p class="copy">&#169 Kyotto Sushi, todos los derechos reservados</p>
+    </footer>
+    <!-- Font Awesome, menú hamburguesa -->
+    <script src="https://kit.fontawesome.com/cb07330d3d.js" crossorigin="anonymous"></script>
+    <script src="./javascript/nav.js" type="module"></script>
+    <Script src="javascript/funcionalidadTienda.js" type="module"></Script>
+    <script src="./javascript/productos.js" type="module"></script>
+    <script src="./javascript/carrito.js" type="module"></script>
+</body>
+
+</html>

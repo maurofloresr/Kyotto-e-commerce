@@ -1,0 +1,607 @@
+$largoNav: 65px;
+$titulo: 500;
+
+img {
+    object-fit: cover;
+}
+
+main {
+    background-color: black;
+    color: white;
+
+}
+
+section {
+    width: 100vw;
+    height: 90vh;
+}
+
+.home {
+    width: 100vw;
+    height: 100vh;
+
+    &__texto {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.sobreNosotros1 {
+    display: grid;
+
+    &__titulo {
+        grid-area: sobreNosotros1__titulo;
+        line-height: 0.9;
+        font-weight: $titulo;
+        font-size: 3rem;
+    }
+
+    &__imagen {
+        grid-area: sobreNosotros1__imagen;
+        border-radius: 10%;
+    }
+
+    &__texto {
+        grid-area: sobreNosotros1__texto;
+    }
+}
+
+.sobreNosotros2{
+    width: 100vw;
+    img{
+        width: 100%;  
+    }
+    &__botones{
+        display: flex;        
+        height: 20vh;
+        a{
+            width: 11rem;
+            border: 3px solid;
+            border-color: white;
+            border-radius: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1.5rem;
+            margin: 0 2rem 1rem;
+        }
+    }
+}
+
+.precios {
+    background-color: black;
+    width: 100vw;
+    background-image: url('/imagenes/KblancaSinFondo30deg.png'); 
+    background-repeat: no-repeat;
+    background-position: top right;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    &__titulo{
+        font-weight: 300;
+    }
+    &__contenedor{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        a{
+            width: 20vw;
+            height: 55vh;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-between;
+            border-radius: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            .precio{
+                font-size: 1.5rem;
+                background-color: white;
+                color:black;
+                display: flex;
+                justify-content: center;
+                margin-top: 1.5rem;
+                
+            }
+            .descripcion{
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+                color: white;
+            
+            }
+        }
+    }
+    
+}
+
+.comoFunciona {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/imagenes/comoFuncionaFondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__texto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: $titulo;
+    }
+
+    &__container {
+        font-family: 'Inter', sans-serif;
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        justify-items: center;
+        align-content: space-around;
+
+        div {
+            background-color: white;
+            color: black;
+            // font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: all 1, 2 ease-in;
+        }
+
+        p {
+            text-align: center;
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .cFnumero1 {
+        grid-area: cFnumero1;
+    }
+
+    .cFparrafo1 {
+        grid-area: cFparrafo1;
+    }
+
+    .cFnumero2 {
+        grid-area: cFnumero2;
+    }
+
+    .cFparrafo2 {
+        grid-area: cFparrafo2;
+    }
+
+    .cFnumero3 {
+        grid-area: cFnumero3;
+    }
+
+    .cFparrafo3 {
+        grid-area: cFparrafo3;
+    }
+}
+
+.primeraCompra {
+    background-image: url('/imagenes/KblancaSinFondoMenos30deg.png');
+    background-size: 30rem;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    &__container {
+        h6 {
+            font-size: 4rem;
+            font-weight: $titulo;
+            line-height: 1.1;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        &__estilo1 {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        &__estilo2 {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        &__botones {
+            display: flex;
+            flex-direction: column;
+
+            button,
+            input {
+                width: 60%;
+                height: 2rem;
+                border-radius: 20px;
+                margin: 0.2rem 0;
+                text-align: center;
+            }
+
+            button {
+                background-color: #fc2424;
+                color: white;
+                font-weight: bold;
+                width: 61%;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+
+// MOBILE
+@media only screen and (max-width: 768px) {
+    .home {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/imagenes/fondo.principal.mujer.comiendo.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &__texto {
+            height: 80vh;
+            justify-content: flex-end;
+            align-items: flex-start;
+            margin-left: 1rem;
+
+            h1 {
+                font-size: 2.5rem;
+                line-height: 0.9;
+
+                span {
+                    display: block;
+                }
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 300;
+                margin: 8rem 2rem 1rem 0rem;
+            }
+        }
+
+        &__logoBlanco {
+            height: 150px;
+            float: right;
+        }
+
+    }
+
+
+    // SOBRE NOSOTROS 1
+    .sobreNosotros1 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "sobreNosotros1__titulo"
+            "sobreNosotros1__imagen"
+            "sobreNosotros1__texto";
+        justify-items: center;
+        height: auto;
+
+        &__titulo {
+            margin: 2.5rem 2rem 2rem 0;
+        }
+
+        &__imagen {
+            width: 80%;
+        }
+
+        &__texto {
+            text-align: center;
+            margin: 3rem 2rem 3.5rem;
+
+            span {
+                font-weight: bold;
+            }
+
+        }
+
+    }
+
+    //   SOBRE NOSOTROS 2
+    .sobreNosotros2{
+        height: 90%;
+        padding-top: 2rem;
+        img{
+            height: 60vh;
+            padding-right: 5rem;
+        }
+        &__botones{
+            flex-direction: column;
+            margin-top: 2rem;
+            a{
+                margin-bottom: 2rem;
+                &:active{
+                    background-color: white;
+                    color:black;
+                    transition: all 1.2s ease-in;
+                }
+            }
+        }
+    }
+
+    // COMO FUNCIONA
+    .comoFunciona {
+        height: auto;
+
+        &__texto {
+            font-size: 2rem;
+            padding: 3rem 0;
+        }
+
+        &__container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                "cFnumero1"
+                "cFparrafo1"
+                "cFnumero2"
+                "cFparrafo2"
+                "cFnumero3"
+                "cFparrafo3";
+            height: 100vw;
+            padding-bottom: 3rem;
+
+            div {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            p {
+                padding: 0.5rem 1.5rem 2rem 1.5rem;
+
+            }
+        }
+    }
+
+
+    .precios {
+        height: 60vh;
+        background-size: 20rem;
+        width: 100vw;
+        &__titulo{
+            font-size: 2.5rem;
+            margin-left: 3.5rem;
+        }
+        &__contenedor{
+            a{
+
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: center;
+                width: 40vw;
+                height: 40vh;
+                margin-top: 2rem;
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+    .primeraCompra {
+        background-size: 15rem;
+
+        &__imagenMujer {
+            display: none;
+        }
+
+        &__container {
+            padding: 1rem 1rem;
+
+            h6 {
+                font-size: 3rem;
+                padding: 1rem 0;
+            }
+
+            &__botones {
+                margin-top: 4rem;
+
+                button,
+                input {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+// DESKTOP
+@media only screen and (min-width: 768px) {
+    .home {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/imagenes/fondo.principal.mujer.comiendo.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &__texto {
+            height: 100%;
+            justify-content: center;
+            padding-left: 2rem;
+
+            h1 {
+                font-size: 4.5rem;
+                line-height: 0.9;
+                padding-top: 8rem;
+
+                span {
+                    display: block;
+                }
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 300;
+                width: 40vw;
+                margin-top: 8rem;
+
+                span {
+                    font-weight: bold;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+
+        &__logoBlanco {
+            width: 7rem;
+            margin: 0;
+            position: absolute;
+            left: 85%;
+            bottom: 2%;
+        }
+    }
+
+
+    //      SOBRE NOSOTROS 1
+    .sobreNosotros1 {
+        padding: 2rem 4rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.6fr 1.4fr;
+        grid-auto-rows: 1fr;
+        grid-template-areas:
+            "sobreNosotros1__imagen sobreNosotros1__titulo"
+            "sobreNosotros1__imagen sobreNosotros1__texto";
+
+
+        &__imagen {
+            height: 70%;
+            width: 60%;
+            margin: 5rem auto;
+        }
+
+        &__titulo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            margin-top: 4rem;
+        }
+
+        &__texto {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 7rem 7rem 7rem 0;
+
+            span {
+                font-weight: bold;
+
+            }
+        }
+    }
+
+    .sobreNosotros2{
+        height: 90vh;
+        padding-top: 3rem;
+        img{
+            height: 70vh;
+        }
+        &__botones{
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            margin-left: 4rem;
+            a:hover{
+                background-color: white;
+                color:black;
+            }
+        }
+    }
+
+    .comoFunciona {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+
+        &__texto {
+            font-size: 4rem;
+        }
+
+        &__container {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "cFnumero1 cFnumero2 cFnumero3"
+                "cFparrafo1 cFparrafo2 cFparrafo3";
+
+            div {
+                width: 3rem;
+                height: 3rem;
+            }
+
+            p {
+                padding: 0 2rem 2rem;
+                font-size: 1.5rem;
+            }
+
+        }
+    }
+
+    .precios {
+        height: 80vh;
+        background-size: 30rem;
+        &__titulo{
+            font-size: 4.5rem;
+            margin-left: 8.5rem;
+            margin: 3rem 8.5rem 3rem;
+        }
+    }
+
+    .primeraCompra {
+        &__imagenMujer {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 35vw;
+                height: 60vh;
+                border-radius: 10%;
+                object-fit: cover;
+            }
+        }
+
+        &__container {
+            width: 50%;
+            margin-right: 2rem;
+
+            &__botones {
+
+                button,
+                input {
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+}

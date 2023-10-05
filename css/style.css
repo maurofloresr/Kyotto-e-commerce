@@ -1,0 +1,908 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style-type: none; }
+
+main {
+  overflow-x: hidden; }
+
+header {
+  font-weight: 300; }
+  header .navbar {
+    background-color: white;
+    color: black; }
+
+@media only screen and (max-width: 768px) {
+  header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    height: 65px; }
+    header .navbar {
+      display: grid;
+      grid-template-columns: 65px auto 65px;
+      grid-template-rows: 65px auto;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas: "navbar__logo . navbar__toggle" "navbar__links navbar__links navbar__links";
+      width: 100vw;
+      height: 65px; }
+      header .navbar__logo {
+        grid-area: navbar__logo; }
+        header .navbar__logo img {
+          max-height: 60px;
+          object-fit: contain;
+          margin: auto; }
+          header .navbar__logo img:active {
+            transform: scale(1.1);
+            transition: 0.1s ease-in; }
+      header .navbar__toggle {
+        grid-area: navbar__toggle;
+        border: none;
+        background: none;
+        height: 65px;
+        font-size: 25px; }
+        header .navbar__toggle i {
+          color: black; }
+        header .navbar__toggle:active {
+          transform: scale(1.1);
+          transition: 0.1s ease-in; }
+      header .navbar__links {
+        background-image: url("/imagenes/fondoNavbarBlanco.jpg");
+        background-size: cover;
+        grid-area: navbar__links;
+        height: calc(100vh - 50px); }
+        header .navbar__links ul {
+          grid-area: navbar__links;
+          height: calc(100vh - 50px);
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          align-content: space-around; }
+          header .navbar__links ul li:active {
+            transform: scale(1.1);
+            transition: 0.1s ease-in; }
+          header .navbar__links ul li .active {
+            text-decoration: underline; }
+          header .navbar__links ul li a {
+            color: black;
+            font-size: 18px;
+            font-weight: bold; }
+        header .navbar__links--hidden {
+          display: none; } }
+
+@media only screen and (min-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; }
+    .header .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1.5rem;
+      position: relative;
+      top: 1rem;
+      margin: 0 1.5rem;
+      border-radius: 20px;
+      transition: all 0.3s ease; }
+      .header .navbar__toggle {
+        display: none; }
+      .header .navbar__logo img {
+        height: 8vh;
+        padding-top: 1vh; }
+        .header .navbar__logo img:hover {
+          transform: rotateZ(-10deg);
+          transition: 0.1s ease-in; }
+      .header .navbar__links {
+        width: 80vw; }
+        .header .navbar__links ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          color: black;
+          padding: 0; }
+          .header .navbar__links ul li .active {
+            font-weight: 600; }
+          .header .navbar__links ul li::after {
+            content: " | ";
+            font-weight: 300; }
+          .header .navbar__links ul li:hover {
+            transform: scale(1.1);
+            transition: 0.1s ease-in; }
+          .header .navbar__links ul li a {
+            color: black;
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 0 0.5rem; }
+          .header .navbar__links ul li:last-child::after {
+            content: ""; }
+    .header .sticky {
+      display: flex;
+      justify-content: space-between;
+      background-color: #fafafa;
+      padding: 0 1.5rem;
+      position: sticky;
+      margin: 0;
+      top: 0;
+      border-radius: 0; } }
+
+.estiloTienda .navbar {
+  background-color: black; }
+  .estiloTienda .navbar ul, .estiloTienda .navbar ul li a, .estiloTienda .navbar i {
+    color: white; }
+
+@media only screen and (max-width: 768px) {
+  .estiloTienda .navbar ul li a {
+    color: black; }
+  #botonCarrito i {
+    color: black; } }
+
+img {
+  object-fit: cover; }
+
+main {
+  background-color: black;
+  color: white; }
+
+section {
+  width: 100vw;
+  height: 90vh; }
+
+.home {
+  width: 100vw;
+  height: 100vh; }
+  .home__texto {
+    display: flex;
+    flex-direction: column; }
+
+.sobreNosotros1 {
+  display: grid; }
+  .sobreNosotros1__titulo {
+    grid-area: sobreNosotros1__titulo;
+    line-height: 0.9;
+    font-weight: 500;
+    font-size: 3rem; }
+  .sobreNosotros1__imagen {
+    grid-area: sobreNosotros1__imagen;
+    border-radius: 10%; }
+  .sobreNosotros1__texto {
+    grid-area: sobreNosotros1__texto; }
+
+.sobreNosotros2 {
+  width: 100vw; }
+  .sobreNosotros2 img {
+    width: 100%; }
+  .sobreNosotros2__botones {
+    display: flex;
+    height: 20vh; }
+    .sobreNosotros2__botones a {
+      width: 11rem;
+      border: 3px solid;
+      border-color: white;
+      border-radius: 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1.5rem;
+      margin: 0 2rem 1rem; }
+
+.precios {
+  background-color: black;
+  width: 100vw;
+  background-image: url("/imagenes/KblancaSinFondo30deg.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center; }
+  .precios__titulo {
+    font-weight: 300; }
+  .precios__contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; }
+    .precios__contenedor a {
+      width: 20vw;
+      height: 55vh;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-between;
+      border-radius: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; }
+      .precios__contenedor a .precio {
+        font-size: 1.5rem;
+        background-color: white;
+        color: black;
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem; }
+      .precios__contenedor a .descripcion {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: white; }
+
+.comoFunciona {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imagenes/comoFuncionaFondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .comoFunciona__texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500; }
+  .comoFunciona__container {
+    font-family: 'Inter', sans-serif;
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-content: space-around; }
+    .comoFunciona__container div {
+      background-color: white;
+      color: black;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      transition: all 1, 2 ease-in; }
+    .comoFunciona__container p {
+      text-align: center; }
+      .comoFunciona__container p span {
+        font-weight: bold; }
+  .comoFunciona .cFnumero1 {
+    grid-area: cFnumero1; }
+  .comoFunciona .cFparrafo1 {
+    grid-area: cFparrafo1; }
+  .comoFunciona .cFnumero2 {
+    grid-area: cFnumero2; }
+  .comoFunciona .cFparrafo2 {
+    grid-area: cFparrafo2; }
+  .comoFunciona .cFnumero3 {
+    grid-area: cFnumero3; }
+  .comoFunciona .cFparrafo3 {
+    grid-area: cFparrafo3; }
+
+.primeraCompra {
+  background-image: url("/imagenes/KblancaSinFondoMenos30deg.png");
+  background-size: 30rem;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; }
+  .primeraCompra__container h6 {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 1.1; }
+    .primeraCompra__container h6 span {
+      font-weight: bold; }
+  .primeraCompra__container p {
+    font-size: 1.5rem;
+    margin: 2rem 0; }
+  .primeraCompra__container__estilo1 {
+    text-transform: uppercase;
+    font-weight: bold; }
+  .primeraCompra__container__estilo2 {
+    font-weight: bold;
+    text-decoration: underline; }
+  .primeraCompra__container__botones {
+    display: flex;
+    flex-direction: column; }
+    .primeraCompra__container__botones button,
+    .primeraCompra__container__botones input {
+      width: 60%;
+      height: 2rem;
+      border-radius: 20px;
+      margin: 0.2rem 0;
+      text-align: center; }
+    .primeraCompra__container__botones button {
+      background-color: #fc2424;
+      color: white;
+      font-weight: bold;
+      width: 61%;
+      cursor: pointer; }
+
+@media only screen and (max-width: 768px) {
+  .home {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imagenes/fondo.principal.mujer.comiendo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+    .home__texto {
+      height: 80vh;
+      justify-content: flex-end;
+      align-items: flex-start;
+      margin-left: 1rem; }
+      .home__texto h1 {
+        font-size: 2.5rem;
+        line-height: 0.9; }
+        .home__texto h1 span {
+          display: block; }
+      .home__texto h3 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin: 8rem 2rem 1rem 0rem; }
+    .home__logoBlanco {
+      height: 150px;
+      float: right; }
+  .sobreNosotros1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "sobreNosotros1__titulo" "sobreNosotros1__imagen" "sobreNosotros1__texto";
+    justify-items: center;
+    height: auto; }
+    .sobreNosotros1__titulo {
+      margin: 2.5rem 2rem 2rem 0; }
+    .sobreNosotros1__imagen {
+      width: 80%; }
+    .sobreNosotros1__texto {
+      text-align: center;
+      margin: 3rem 2rem 3.5rem; }
+      .sobreNosotros1__texto span {
+        font-weight: bold; }
+  .sobreNosotros2 {
+    height: 90%;
+    padding-top: 2rem; }
+    .sobreNosotros2 img {
+      height: 60vh;
+      padding-right: 5rem; }
+    .sobreNosotros2__botones {
+      flex-direction: column;
+      margin-top: 2rem; }
+      .sobreNosotros2__botones a {
+        margin-bottom: 2rem; }
+        .sobreNosotros2__botones a:active {
+          background-color: white;
+          color: black;
+          transition: all 1.2s ease-in; }
+  .comoFunciona {
+    height: auto; }
+    .comoFunciona__texto {
+      font-size: 2rem;
+      padding: 3rem 0; }
+    .comoFunciona__container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: "cFnumero1" "cFparrafo1" "cFnumero2" "cFparrafo2" "cFnumero3" "cFparrafo3";
+      height: 100vw;
+      padding-bottom: 3rem; }
+      .comoFunciona__container div {
+        width: 2rem;
+        height: 2rem; }
+      .comoFunciona__container p {
+        padding: 0.5rem 1.5rem 2rem 1.5rem; }
+  .precios {
+    height: 60vh;
+    background-size: 20rem;
+    width: 100vw; }
+    .precios__titulo {
+      font-size: 2.5rem;
+      margin-left: 3.5rem; }
+    .precios__contenedor a {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      width: 40vw;
+      height: 40vh;
+      margin-top: 2rem; }
+      .precios__contenedor a:nth-child(3) {
+        display: none; }
+  .primeraCompra {
+    background-size: 15rem; }
+    .primeraCompra__imagenMujer {
+      display: none; }
+    .primeraCompra__container {
+      padding: 1rem 1rem; }
+      .primeraCompra__container h6 {
+        font-size: 3rem;
+        padding: 1rem 0; }
+      .primeraCompra__container__botones {
+        margin-top: 4rem; }
+        .primeraCompra__container__botones button,
+        .primeraCompra__container__botones input {
+          width: 90%; } }
+
+@media only screen and (min-width: 768px) {
+  .home {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/imagenes/fondo.principal.mujer.comiendo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+    .home__texto {
+      height: 100%;
+      justify-content: center;
+      padding-left: 2rem; }
+      .home__texto h1 {
+        font-size: 4.5rem;
+        line-height: 0.9;
+        padding-top: 8rem; }
+        .home__texto h1 span {
+          display: block; }
+      .home__texto h3 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        width: 40vw;
+        margin-top: 8rem; }
+        .home__texto h3 span {
+          font-weight: bold;
+          margin: 0;
+          padding: 0; }
+    .home__logoBlanco {
+      width: 7rem;
+      margin: 0;
+      position: absolute;
+      left: 85%;
+      bottom: 2%; }
+  .sobreNosotros1 {
+    padding: 2rem 4rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.6fr 1.4fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas: "sobreNosotros1__imagen sobreNosotros1__titulo" "sobreNosotros1__imagen sobreNosotros1__texto"; }
+    .sobreNosotros1__imagen {
+      height: 70%;
+      width: 60%;
+      margin: 5rem auto; }
+    .sobreNosotros1__titulo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      margin-top: 4rem; }
+    .sobreNosotros1__texto {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin: 7rem 7rem 7rem 0; }
+      .sobreNosotros1__texto span {
+        font-weight: bold; }
+  .sobreNosotros2 {
+    height: 90vh;
+    padding-top: 3rem; }
+    .sobreNosotros2 img {
+      height: 70vh; }
+    .sobreNosotros2__botones {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      margin-left: 4rem; }
+      .sobreNosotros2__botones a:hover {
+        background-color: white;
+        color: black; }
+  .comoFunciona {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center; }
+    .comoFunciona__texto {
+      font-size: 4rem; }
+    .comoFunciona__container {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "cFnumero1 cFnumero2 cFnumero3" "cFparrafo1 cFparrafo2 cFparrafo3"; }
+      .comoFunciona__container div {
+        width: 3rem;
+        height: 3rem; }
+      .comoFunciona__container p {
+        padding: 0 2rem 2rem;
+        font-size: 1.5rem; }
+  .precios {
+    height: 80vh;
+    background-size: 30rem; }
+    .precios__titulo {
+      font-size: 4.5rem;
+      margin-left: 8.5rem;
+      margin: 3rem 8.5rem 3rem; }
+  .primeraCompra__imagenMujer {
+    width: 50%;
+    display: flex;
+    justify-content: center; }
+    .primeraCompra__imagenMujer img {
+      width: 35vw;
+      height: 60vh;
+      border-radius: 10%;
+      object-fit: cover; }
+  .primeraCompra__container {
+    width: 50%;
+    margin-right: 2rem; }
+    .primeraCompra__container__botones button,
+    .primeraCompra__container__botones input {
+      width: 60%; } }
+
+footer {
+  height: 90vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imagenes/fondoFooter.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2rem; }
+  footer a {
+    color: white; }
+    footer a:hover {
+      transform: scale(1.2);
+      transition: all ease-in 1.2s; }
+  footer .principal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly; }
+    footer .principal__contacto__titulo {
+      font-size: 4rem;
+      font-weight: 300; }
+    footer .principal__contacto__caja {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 40vh;
+      align-items: center; }
+      footer .principal__contacto__caja__sociales, footer .principal__contacto__caja__ubicacion {
+        display: flex;
+        flex-direction: column; }
+        footer .principal__contacto__caja__sociales__titulos, footer .principal__contacto__caja__ubicacion__titulos {
+          font-size: 2rem;
+          margin-bottom: 1rem; }
+    footer .principal__mapa iframe {
+      border-radius: 20px; }
+  footer .copy {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem; }
+
+@media only screen and (max-width: 768px) {
+  footer .principal__contacto__titulo {
+    font-size: 2rem; }
+  footer .principal__contacto__caja {
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column; }
+    footer .principal__contacto__caja__sociales__titulos, footer .principal__contacto__caja__ubicacion__titulos {
+      font-size: 1rem; }
+  footer .principal__mapa {
+    display: none; } }
+
+.mainTienda {
+  overflow-y: hidden;
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around; }
+  .mainTienda h3 {
+    font-weight: 600;
+    font-size: 4.5rem;
+    margin: 11rem 0 4rem 4rem;
+    line-height: 0.99; }
+  .mainTienda .contenidoTienda {
+    padding: 5rem 0rem 0 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto; }
+    .mainTienda .contenidoTienda #piezas,
+    .mainTienda .contenidoTienda #combos {
+      width: 100vw;
+      height: 10vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 3rem;
+      border: none;
+      background-color: black;
+      color: white;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      cursor: pointer; }
+      .mainTienda .contenidoTienda #piezas .estiloTituloTienda,
+      .mainTienda .contenidoTienda #combos .estiloTituloTienda {
+        font-size: 3rem; }
+        @media only screen and (max-width: 768px) {
+          .mainTienda .contenidoTienda #piezas .estiloTituloTienda,
+          .mainTienda .contenidoTienda #combos .estiloTituloTienda {
+            font-size: 1.5rem; } }
+      .mainTienda .contenidoTienda #piezas div,
+      .mainTienda .contenidoTienda #combos div {
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        .mainTienda .contenidoTienda #piezas div p,
+        .mainTienda .contenidoTienda #combos div p {
+          font-size: 1.5rem;
+          margin-right: 1rem; }
+        .mainTienda .contenidoTienda #piezas div i,
+        .mainTienda .contenidoTienda #combos div i {
+          font-size: 1.5rem; }
+    .mainTienda .contenidoTienda #combos {
+      background-color: white;
+      color: black; }
+  .mainTienda .carrito {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100vh;
+    overflow-y: hidden;
+    flex-direction: column;
+    padding: 3rem 3rem;
+    overflow-x: hidden;
+    background-color: white;
+    border: solid 1px black;
+    z-index: 3; }
+    .mainTienda .carrito__titulo {
+      width: 20vw;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center; }
+      .mainTienda .carrito__titulo h6 {
+        font-size: 2rem;
+        font-weight: 300; }
+      .mainTienda .carrito__titulo button {
+        width: 3rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+        background: none;
+        border: none; }
+    .mainTienda .carrito__separacion {
+      display: block;
+      height: 3px;
+      background-color: black;
+      margin-top: 10px; }
+    .mainTienda .carrito__contenido {
+      overflow-y: auto;
+      height: 60%; }
+    .mainTienda .carrito__detalle {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      width: 100%; }
+      .mainTienda .carrito__detalle__total {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1rem 0; }
+      .mainTienda .carrito__detalle button {
+        width: 90%;
+        height: 2rem;
+        border-radius: 20px;
+        border: none; }
+      .mainTienda .carrito__detalle__comprar {
+        background-color: black;
+        color: white; }
+
+.piezaCarrito {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  overflow-x: hidden; }
+  .piezaCarrito__izq {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center; }
+    .piezaCarrito__izq img {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px; }
+    .piezaCarrito__izq__contenido {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin-left: 1rem; }
+      .piezaCarrito__izq__contenido__cantidades {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        border: solid 1px black;
+        border-radius: 20px;
+        padding: 0 0.2rem; }
+        .piezaCarrito__izq__contenido__cantidades button {
+          background-color: black;
+          border: none;
+          color: white;
+          font-weight: bold;
+          width: 20px;
+          height: 20px;
+          border-radius: 20px;
+          align-items: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1px 1px 0 0; }
+  .piezaCarrito__der button {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem; }
+
+#contenidoPiezas {
+  display: none;
+  flex-wrap: wrap;
+  background-color: black;
+  color: white;
+  padding: 2rem; }
+
+.pieza {
+  width: 45vw;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row; }
+  .pieza img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px; }
+  .pieza__caja {
+    padding: 1rem 0 0 1rem;
+    width: 25vw;
+    word-wrap: break-word;
+    overflow-wrap: break-word; }
+    .pieza__caja p {
+      width: auto; }
+    .pieza__caja__titulo {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: bold; }
+    .pieza__caja__descripcion {
+      font-weight: 100;
+      font-size: 1rem; }
+    .pieza__caja button {
+      width: 24vw;
+      height: 2rem;
+      background-color: white;
+      color: black;
+      border-radius: 20px;
+      border: none;
+      margin-top: 1rem;
+      cursor: pointer; }
+      .pieza__caja button:active {
+        background-color: black;
+        color: white;
+        border: solid 1px white;
+        transition: all 0.2s ease-in; }
+
+#contenidoCombos {
+  display: none;
+  flex-wrap: wrap; }
+
+.combo {
+  width: 80vw;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2rem 4rem; }
+  .combo img {
+    width: 250px;
+    height: 300px;
+    border-radius: 20px; }
+  .combo__caja {
+    padding: 1rem 3rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word; }
+    .combo__caja__titulo {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: bold; }
+      .combo__caja__titulo__descripcion {
+        font-weight: 100;
+        font-size: 1rem; }
+    .combo__caja button {
+      width: 40vw;
+      height: 2rem;
+      background-color: black;
+      color: white;
+      border-radius: 20px;
+      border: none;
+      margin-top: 2rem;
+      cursor: pointer; }
+      .combo__caja button:hover {
+        background-color: white;
+        color: black;
+        border: solid 1px black;
+        transition: all 0.2s ease-in; }
+
+@media only screen and (max-width: 768px) {
+  .pieza {
+    padding: 0.5rem;
+    width: 90vw;
+    align-items: center;
+    margin-bottom: 1rem; }
+    .pieza img {
+      width: 100px;
+      height: 100px; }
+    .pieza__caja {
+      width: 50vw; }
+      .pieza__caja__titulo {
+        font-size: 1rem;
+        margin-bottom: 0.2rem; }
+      .pieza__caja button {
+        width: 45vw;
+        margin-top: 0.5rem; }
+  .combo {
+    padding: 0.5rem;
+    width: 90vw;
+    align-items: center;
+    margin-bottom: 1rem; }
+    .combo img {
+      width: 150px;
+      height: 200px; }
+    .combo__caja {
+      width: 50vw;
+      padding-left: 1rem;
+      padding-right: 0; }
+      .combo__caja p {
+        font-size: 0.8rem; }
+      .combo__caja__titulo {
+        margin-bottom: 0.2rem; }
+      .combo__caja button {
+        width: 45vw;
+        margin-top: 0.5rem; }
+  #carrito {
+    width: 100vw;
+    max-width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 1rem 2rem;
+    padding-right: 10rem;
+    left: 0; } }

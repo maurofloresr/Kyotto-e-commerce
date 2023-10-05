@@ -1,0 +1,22 @@
+[
+    {"id": 1 , "tipo": "Pieza", "nombre": "californian", "precio": "1900", "precioMitad": "1150","descripcion": "Salmón y queso, coronado en sésamo tostado.", "img": "imagenes/californianRoll.jpeg"},
+    {"id": 2 , "tipo": "Pieza", "nombre": "Avok Ebi", "precio": "2000", "precioMitad": "1250", "descripcion":"Langostino panizado, queso philadelphia y palta, coronado en sésamo tostado.", "img":"imagenes/AvokEbiRoll.jpg"},
+    {"id": 3 , "tipo": "Pieza", "nombre": "Vegetarian", "precio": "1800", "precioMitad": "1100", "descripcion": "Cebolla panizada y queso philadelphia, coronado en sésamo tostado.", "img": "imagenes/VegetarianRoll.jpg"},
+
+    {"id": 4 , "tipo": "Pieza", "nombre": "Tropical", "precio": "2100", "preciMitad": "1300", "descripcion": "Langostino panizado y queso philadelphia, coronado con mango y salsa pasión.", "img": "imagenes/tropicalRoll.jpg"},
+    {"id": 5 , "tipo": "Pieza", "nombre": "Avokado", "precio": "2500", "precioMitad": "1550", "descripcion": "Tartar de salmón y langostino panizado, coronado con palta y sésamo tostado.", "img": "imagenes/avokadoRoll.jpeg"},
+    {"id": 6 , "tipo": "Pieza", "nombre": "Buenos Aires", "precio": "2400", "precioMitad": "1500", "descripcion": "Langostino panizado y queso philadelphia, coronado en salmón.", "img": "imagenes/buenosAiresRoll.jpg"},
+    {"id": 7 , "tipo": "Pieza", "nombre": "Mexican", "precio": "2200", "precioMitad": "1350", "descripcion": "Langostino panizado y queso philadephia coronado con guacamole y nachos.", "img": "imagenes/mexicanRoll.jpeg"},
+    {"id": 8 , "tipo": "Pieza", "nombre": "Mexican Vegetarian", "precio": "2200", "precioMitad": "1350", "descripcion": "Cebolla panizada y queso philadelphia, coronado en guacamole y nachos.", "img": "imagenes/VeggieMExicanRoll.jpg"},
+
+    {"id": 9 , "tipo": "Pieza", "nombre": "Niguiri de Salmón", "precio": "700", "precio5u": "3200", "precio10u": "6000", "descripcion": "bola de arroz coronada en salmon", "img":"imagenes/niguiri.jpg"},
+    {"id": 10 , "tipo": "Pieza", "nombre": "Geisha", "precio": "800", "precio5u": "3600", "precio10u": "6750", "descripcion": "queso y palta envuelto en salmón", "img": "imagenes/geisha.jpeg"},
+
+    {"id": 11 , "tipo": "Salsas", "nombre": "Salsa de Soja", "precio": "1500"},
+    {"id": 12 , "tipo": "Salsas", "nombre": "Salsa Teriyaki", "precio": "1500"},
+    {"id": 13 , "tipo": "Salsas", "nombre": "Salsa Pasión", "precio": "1500"},
+
+    {"id": 20, "tipo": "Combo", "nombre": "Combo Golden", "precio": "6000", "descripcion": "8 piezas de Californian roll/ hot californian roll, 8 piezas de Caramel Californian Roll, 8 piezas de Buenos Aires Roll y 2 niguirís de Salmón", "salsaIncluida": "Incluye Salsa de Soja y Teriyaki", "img": "imagenes/combogolden.jpg"},
+    {"id": 21, "tipo": "Combo", "nombre": "Combo Salmon", "precio": "7500", "descripcion": "8 piezas de Californian roll/ hot californian roll, 8 piezas de New York Phila Roll, 8 piezas de Buenos Aires Roll junto a 2 niguirís de Salmón y 2 geishas", "salsaIncluida": "Incluye Salsa de Soja y Teriyaki", "img": "imagenes/comboSalmon.jpg"},
+    {"id": 22, "tipo": "Combo", "nombre": "Combo Kyotto", "precio": "10000", "descripcion": "8 piezas de Californian roll/ hot californian roll, 8 piezas de Avokado Roll, 8 piezas de Buenos Aires Roll, 8 piezas de Tropical Roll. Junto a 2 niguirís de Salmón, 2 Geishas y 2 langostinos panizadosn", "salsaIncluida": "Incluye Salsa de Soja, Teriyaki y Pasión", "img": "imagenes/comboKyotto.JPG"}
+]
